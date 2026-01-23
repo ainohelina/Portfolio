@@ -1,0 +1,83 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #111;
+    background: #fff;
+}
+
+
+.hero-inner {
+    max-width: 700px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* NIMI */
+.main-title {
+text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* ABOUT */
+.about-text {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+/* CONTACT BOX */
+.contact-box {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 24px;
+    background: #fafafa;
+}
+
+/* MENU */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 240px;
+    height: 100%;
+    background: #f7f7f7;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    margin: 20px;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #111;
+}

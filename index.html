@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Aino Karjalainen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Mustavalkoinen teema */
+        body {
+            background-color: #ffffff; /* valkoinen tausta */
+            color: #000000; /* musta teksti */
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav.menu ul li a {
+            color: #000000; /* mustat navigointilinkit */
+        }
+
+        nav.menu ul li a:hover {
+            text-decoration: underline; /* pieni hover-efekti */
+        }
+
+        /* Contact-laatikko säilyy mustana */
+        .contact-box {
+            border: 1px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+            color: #000000;
+        }
+
+        .contact-box a {
+            color: #000000; /* linkit mustiksi */
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Yleinen header-otsikko keskelle */
+        h1 {
+            text-align: center;
+        }
+
+        /* Subtitle keskelle ja mustaksi */
+        .subtitle {
+            color: #000000;
+        }
+
+        /* About-text keskelle sivua, tasa-reunainen */
+        .about-text {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: justify; /* tasa-reunainen */
+            line-height: 1.6;
+            padding: 0 15px; /* sisennys sivusta */
+        }
+
+        /* Vähän ylimääräistä tilaa otsikon ja tekstin väliin */
+        h1 + .about-text {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="academic.html">Academic Background</a></li>
+        <li><a href="projects.html">Skills</a></li>
+        <li><a href="experience.html">Work Experience</a></li>
+        <li><a href="cv.html">CV</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-inner">
+        <h1>Aino Karjalainen</h1>
+
+        <div class="profile-container" style="display: flex; justify-content: center;">
+            <img src="profiilikuva.jpg" alt="Kuva" width="310" height="360">
+        </div>
+    </div>
+
+    <h1>About me</h1>
+
+    <section class="about-text">
+        <p>
+            Hello and welcome to my portfolio! My name is Aino, and I am pursuing a Master's degree in Information, Communication, and Information Technology, with a major in Human-Computer Interaction. My studies provide a strong technical and multidisciplinary foundation for designing user-centered digital solutions, combining programming, artificial intelligence, interaction design, and psychological perspectives. I am particularly interested in UI/UX design, interaction principles, and the potential of generative artificial intelligence in developing user-friendly and efficient solutions.
+        </p>
+
+        <p>
+            I am currently looking for a trainee position for the summer of 2026 and would also be willing to continue working alongside my studies in the fall of 2026. I am also interested in the opportunity to complete my master's thesis, so please feel free to contact me if you think I would be a good fit for your team! 
+        </p>
+    </section>
+
+    <section class="contact-box">
+        <h2 style="margin-top: 0;">Contact</h2>
+        <p>Email: aino.h.karjalainen@aalto.fi</p>
+        <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 1.2rem;">Links</h3>
+        <p><a href="https://www.linkedin.com/in/aino-karjalainen-99a50b303/">LinkedIn</a></p>
+        <p><a href="https://github.com/ainohelina">GitHub</a></p>
+    </section>
+
+</header>
+
+<script src="menu.js"></script>
+</body>
+</html>
