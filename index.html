@@ -39,44 +39,72 @@
             background-color: black;
         }
 
-        /* Itse sivupalkki */
-        nav.menu {
-            position: fixed;
-            top: 0;
-            left: -250px; /* Piilossa vasemmalla */
-            width: 250px;
-            height: 100%;
-            background-color: #f9f9f9;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            transition: 0.3s ease-in-out;
-            z-index: 999;
-            padding-top: 80px;
-        }
+        /* Navbar container */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
 
-        /* Kun menu on auki */
-        nav.menu.active {
-            left: 0;
-        }
+/* Piilotetaan checkbox */
+#hamburger-check {
+  display: none;
+}
 
-        nav.menu ul {
-            list-style: none;
-            padding: 0;
-        }
+/* Hampurilaisikoni (3 viivaa) */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
 
-        nav.menu ul li {
-            padding: 15px 25px;
-        }
+.hamburger-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: 0.3s ease;
+}
 
-        nav.menu ul li a {
-            color: #000000; 
-            text-decoration: none;
-            font-weight: 400;
-            display: block;
-        }
+/* Menu items (piilossa aluksi) */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 200px;
+  display: none;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
 
-        nav.menu ul li a:hover {
-            color: #6DCBEE; 
-        }
+/* Näytä kun checkbox on checked */
+#hamburger-check:checked ~ .nav-menu {
+  display: block;
+}
+
+/* Menu linkkien tyylit */
+.nav-menu li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.nav-menu li a:hover {
+  background: #f0f0f0;
+  color: #6DCBEE;
+}
+
 
        
         .contact-box {
@@ -125,15 +153,23 @@
 </head>
 <body>
 
-<nav class="menu" id="sideMenu">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="academic.html">Academic Background</a></li>
-        <li><a href="projects.html">Skills</a></li>
-        <li><a href="experience.html">Work Experience</a></li>
-        <li><a href="cv.html">CV</a></li>
-    </ul>
+<nav class="navbar">
+  <input type="checkbox" id="hamburger-check" />
+  <label for="hamburger-check" class="hamburger-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="academic.html">Academic Background</a></li>
+    <li><a href="projects.html">Skills</a></li>
+    <li><a href="experience.html">Work Experience</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
 </nav>
+
 
 <header class="hero">
     <div class="hero-inner">
