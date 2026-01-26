@@ -15,17 +15,70 @@
             color: #000000; 
             margin: 0;
             font-family: 'Inter', sans-serif;
+   
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+        }
+
+        /* Itse sivupalkki */
+        nav.menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Piilossa vasemmalla */
+            width: 250px;
+            height: 100%;
+            background-color: #f9f9f9;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: 0.3s ease-in-out;
+            z-index: 999;
+            padding-top: 80px;
+        }
+
+        /* Kun menu on auki */
+        nav.menu.active {
+            left: 0;
+        }
+
+        nav.menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav.menu ul li {
+            padding: 15px 25px;
         }
 
         nav.menu ul li a {
             color: #000000; 
+            text-decoration: none;
+            font-weight: 400;
+            display: block;
         }
 
         nav.menu ul li a:hover {
-            text-decoration: underline; 
+            color: #6DCBEE; 
         }
 
-        
+       
         .contact-box {
             border: 1px solid #000;
             border-radius: 8px;
@@ -72,7 +125,7 @@
 </head>
 <body>
 
-<nav class="menu">
+<nav class="menu" id="sideMenu">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="academic.html">Academic Background</a></li>
