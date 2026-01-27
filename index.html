@@ -105,7 +105,6 @@ body {
     text-decoration: underline;
 }
 
-h1 { text-align: center; margin-top: 60px; }
 
 .about-text {
     background: rgba(255, 255, 255, 0.8);
@@ -116,6 +115,13 @@ h1 { text-align: center; margin-top: 60px; }
     margin: 20px auto;
     text-align: justify; 
     line-height: 1.6; 
+    h1 { 
+    text-align: center; 
+    margin-top: 40px; 
+    margin-bottom: 10px; /* Pienentää väliä tekstin alla */
+    position: relative; 
+    z-index: 2;
+
 }
 
 h1 + .about-text {
@@ -125,7 +131,7 @@ h1 + .about-text {
 .profile-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
     .profile-container{
         border-radius: 10px;
@@ -155,14 +161,12 @@ h1 + .about-text {
 
 
 <header class="hero">
-    <div class="hero-inner">
-        <h1>Aino Karjalainen</h1>
+    <h1>Aino Karjalainen</h1>
 
-        <div class="profile-container" style="display: flex; justify-content: center;">
+    <div class="profile-container" style="display: flex; justify-content: center;">
             <img src="profiilikuva.jpg" alt="Kuva" width="310" height="360">
-        </div>
     </div>
-
+    
     <h1>About me</h1>
 
     <section class="about-text">
