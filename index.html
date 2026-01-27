@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fi">
 <head>
 <meta charset="UTF-8">
@@ -14,20 +14,17 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Navbar container */
 .navbar {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 9999; /* Korkea z-index varmistaa että näkyy */
+    z-index: 9999; 
 }
 
-/* Piilotetaan checkbox */
 #hamburger-check {
     display: none;
 }
 
-/* Hampurilaisikoni (3 viivaa) */
 .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -47,7 +44,7 @@ body {
     transition: 0.3s ease;
 }
 
-/* Menu items (piilossa aluksi) */
+
 .nav-menu {
     list-style: none;
     padding: 0;
@@ -62,12 +59,11 @@ body {
     border-radius: 5px;
 }
 
-/* Näytä kun checkbox on checked */
+
 #hamburger-check:checked ~ .nav-menu {
     display: block;
 }
 
-/* Menu linkkien tyylit */
 .nav-menu li a {
     display: block;
     padding: 12px 20px;
