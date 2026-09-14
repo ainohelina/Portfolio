@@ -9,21 +9,27 @@
 </div>
 
     <style>
-		body {
-        margin: 0;
-        padding: 0;
-        background-image: url('taustakuva.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('taustakuva.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
         .content {
             text-align: center;
         }
 
         h3 {
             font-weight: normal;
+        }
+
+        h4 {
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
 
         .education-box {
@@ -33,26 +39,43 @@
             max-width: 700px;
             text-align: left;
         }
-	.intro-text {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    text-align: justify;
-}
-.cv-container {
-    text-align: center;
-    margin: 30px 0;
-}
 
-.back-link {
-    text-decoration: none;
-    font-size: 16px;
-    color: #333;
-}
+        .intro-text {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+        }
 
-.back-link:hover {
-    text-decoration: underline;
-}
+        .cv-container {
+            text-align: center;
+            margin: 30px 0;
+        }
 
+        .back-link {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-image {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 25px auto;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 
@@ -61,18 +84,169 @@
 
 <h1>Projects</h1>
 
-  <div class="intro-text">
-<p>
-Smart socks (Smart wearables course spring 2026)
-</p>
-  
+<div class="intro-text">
+
+<div class="education-box">
+
+    <h2>Smart Socks</h2>
+    <h3>Smart Wearables ELEC-E7840 · Spring 2026</h3>
+
+    <p>
+        Together with my partner, I designed and implemented a functional
+        wireless smart clothing prototype (smart socks and a knee brace)
+        for real-time physical activity recognition. My specific
+        responsibilities included integrating the hardware into the socks,
+        Arduino programming, and building a machine learning model for
+        real-time recognition.
+    </p>
+
+    <img src="socks3.jpg" alt="Initial design sketches for the smart socks" class="project-image">
+    <p class="image-caption">
+        Initial design sketches for the sensor placement and electronics.
+    </p>
 
 
-  
+    <h3>Project phases</h3>
+
+
+    <h4>Smart textile manufacturing (E-textiles)</h4>
+
+    <p>
+        I fabricated soft piezoresistive pressure sensors using a multi-layer
+        textile structure, conductive fabrics, and conductive threads. I
+        positioned the sensors at critical pressure points on the sole of the
+        foot (heel, ball of the foot, and arch) as well as on the knee brace.
+    </p>
+
+    <img src="socks2.jpg" alt="Textile sensors and electronics used in the smart socks" class="project-image">
+    <p class="image-caption">
+        Textile pressure sensors, conductive connections, and the ESP32
+        microcontroller integrated into the wearable prototype.
+    </p>
+
+
+    <h4>Embedded electronics and circuitry</h4>
+
+    <p>
+        I designed and soldered voltage divider circuits without a breadboard
+        and integrated them directly into the socks using snap fasteners to
+        ensure washability and wearability. I programmed two Seeed XIAO
+        ESP32S3 microcontrollers to read sensor data and transmit it
+        wirelessly via Wi-Fi.
+    </p>
+
+    <img src="socks1.jpg" alt="Soldering and programming the ESP32 microcontroller" class="project-image">
+    <p class="image-caption">
+        Soldering and preparing the ESP32 microcontroller for wireless
+        sensor data collection.
+    </p>
+
+    <img src="socks4.jpg" alt="Final smart sock prototype with integrated electronics" class="project-image">
+    <p class="image-caption">
+        Final prototype with the electronics attached to the sock using
+        snap fasteners.
+    </p>
+
+
+    <h4>Signal processing and machine learning</h4>
+
+    <p>
+        I built a Python tool for real-time data reception, preprocessing,
+        and feature extraction (sliding time window, statistical features,
+        normalization). I trained and optimized a classification model
+        (Random Forest) capable of recognizing eight different activities
+        and postures (e.g., walking, using stairs, sit-ups, cross-legged
+        sitting) with 95% validation accuracy.
+    </p>
+
+
+    <h4>User testing and evaluation</h4>
+
+    <p>
+        I collected and analyzed data from five external test subjects and
+        measured the system's usability and comfort using a structured
+        questionnaire.
+    </p>
+
+
+    <h3>What did this course and project teach me?</h3>
+
+    <p>
+        I gained practical insight into how piezoresistive materials respond
+        to mechanical pressure and compression, and how using different
+        material layers prevents sensor saturation under extreme pressure.
+    </p>
+
+    <p>
+        I deepened my knowledge of electronics fundamentals, circuit design,
+        and the use of conductive thread. After a hiatus of nearly ten years,
+        I also had the opportunity to visit an electronics workshop, as we
+        needed to solder wires to an ESP32 microcontroller to make the system
+        wireless.
+    </p>
+
+    <p>
+        I learned to write C++/Arduino code for the microcontroller to collect
+        analog data and to wirelessly synchronize data transmission from two
+        separate devices to a computer.
+    </p>
+
+    <p>
+        I learned to execute the entire machine learning pipeline—from data
+        cleaning and normalization to comparing classifier performance
+        (Decision Tree vs. Random Forest), analyzing confusion matrices, and
+        utilizing an "Unknown" class to improve model reliability.
+    </p>
+
+
+    <h3>My key insights</h3>
+
+
+    <h4>The interface between the "hard" and "soft" worlds is the biggest stumbling block</h4>
+
+    <p>
+        The circuit works in theory, but in the context of a garment, it
+        stretches, twists, and is subjected to constant mechanical stress.
+        My most significant insight was to move the microcontroller and rigid
+        connections off the flexible sock and onto separate panels attached
+        via snaps, while reinforcing the solder joints with a non-conductive
+        material (hot glue). Ensuring a garment is wearable and durable
+        requires just as much mechanical design as it does electronics.
+        This also highlighted the fact that design and testing go hand in
+        hand; without testing, a design can prove completely unusable.
+    </p>
+
+
+    <h4>Machine learning quality depends on physical fit, not just code</h4>
+
+    <p>
+        The challenges encountered with the machine learning model when used
+        by different people (accuracy ranging from 65% to 87%) stemmed not
+        from the algorithm itself, but from variations in foot size and gait;
+        these differences caused the sock to stretch in various ways, leading
+        to anomalies in the underlying signal. I realized just how critical
+        user-centric design, sensor adjustability, and data diversity are for
+        the generalizability of smart clothing.
+    </p>
+
+
+    <h4>Iterative "trial and error" and tolerating uncertainty</h4>
+
+    <p>
+        As I had never worked with circuitry or wearable electronics before,
+        the project taught me perseverance. Dealing with broken solder joints,
+        debugging code, and facing model failures right before the live demo
+        was frustrating, but continuous testing, learning from mistakes, and
+        quick reactions ultimately led to the course's top grade (5/5).
+    </p>
+
 </div>
-	   <p style="text-align:center; font-size:10px; color:#D3D3D3; margin-top:20px;">
-  &copy;2026 Aino Karjalainen
-</p>   
+
+</div>
+
+<p style="text-align:center; font-size:10px; color:#D3D3D3; margin-top:20px;">
+    &copy;2026 Aino Karjalainen
+</p>
 
 </main>
 </body>
